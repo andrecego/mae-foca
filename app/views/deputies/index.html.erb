@@ -1,0 +1,19 @@
+<h1>Deputados</h1>
+
+<ul>
+  Assinou a favor do fim da semana de 6 dias de trabalho: <%= @good_deputies.count %>
+  <% @good_deputies.each do |deputy| %>
+    <li>
+      <%= deputy["nome"] %> - <%= deputy["siglaPartido"] %>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
+  Não se pronunciou: <%= @bad_deputies.count %>
+  <% @bad_deputies.each do |deputy| %>
+    <li>
+      <%= deputy["nome"] %> - <%= deputy["siglaPartido"] %>
+    </li>
+  <% end %>
+</ul>
